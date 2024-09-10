@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    background-color: black;
+}
+#selecsionar{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}   
+#selecsionar img{
+    display: flex;
+    height: 630px;
+    width: 630px;
+    justify-content: space-evenly;
+    cursor: pointer;
+    animation:  animacion2 1s ease forwards;
+}
+#selecsionar img:hover{
+    animation:  animacion 1s ease forwards;
+}
+.logo img{
+    width: 50px;
+
+}
+@keyframes animacion {
+    1%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+@keyframes animacion2 {
+    1%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
