@@ -22,40 +22,38 @@
         <div class="chango">
             <img src="carrito-de-compras.png" alt="">
         </div>
-        <div class="usuario_foto">
-            <img src="menu.png" alt=""class="usuario_foto">
-        </div>
+        <section class="menudesplegable ">
+            <div class="dropdown">
+                <img src="menu.png" alt="" onclick="toggleMenu()" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href=""><p  class="Nosotros">Nosotros</p></a>
+                    <div class="rango">
+                        <div>
+                            <p>Precio</p>
+                        </div>
+                        <div class="input">
+                            <div class="max"> <p>max </p> <input type="number"></div>
+                            <div class="min"> <p>min </p> <input type="number"></div>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="perfumes_menu">Perfumes</a>
+                        <div class="submenu-content">
+                            <p>florales</p>
+                            <p>amaderados</p>
+                            <p>dulces</p>
+                            <p>amargos</p>
+                        </div>
+
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
         <div class="caja_para_categorias">
 
         </div>
-        <section id="categorias">
-            <h1>HOMBRES</h1>
-            <h2>Amaderados</h2>
-            <h2>Frutales</h2>
-            <h2>Dulces</h2>
-            <h2>Marinos</h2>
-            <h2>Cítricos</h2>
-            <h2>Especiados</h2>
-            <h2>Aromáticos</h2>
-
-            <h1>MUJERES</h1>
-            <h2>Florales</h2>
-            <h2>Frutales</h2>
-            <h2>Dulces</h2>
-            <h2>Cítricos</h2>
-            <h2>Amaderados</h2>
-            <h2>Verdes</h2>
-
-            <h1>UNISEX</h1>
-            <h2>Amaderados</h2>
-            <h2>Aromáticos</h2>
-            <h2>Cítricos</h2>
-            <h2>Especiados</h2>
-            <h2>Florales</h2>
-        </section>
 
         <section id="perfumes">
             <div class="fila">
@@ -142,5 +140,44 @@
         </section>
     </main>
     
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+    </script>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>Sobre Nosotros</h3>
+            <p>Ritta et Compagnie es tu destino para fragancias de lujo. Descubre tu aroma perfecto con nosotros.</p>
+        </div>
+        <div class="links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="contactos">
+            <h3>Contáctanos</h3>
+            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            <p><i class="fas fa-envelope"></i> info@rittaetcompagnie.com</p>
+        </div>
+        <div class="social">
+            <h3>Síguenos</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="abajo">
+        &copy; 2023 Ritta et Compagnie | Todos los derechos reservados
+    </div>
+</footer>
+
 </body>
 </html>
