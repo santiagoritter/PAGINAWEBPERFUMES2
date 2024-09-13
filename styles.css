@@ -1,4 +1,4 @@
-**{
+*{
     margin: 0;
     padding: 0;}
 body {
@@ -48,6 +48,7 @@ body {
     background-color:white;
     border-bottom-right-radius: 17px;
     border-top-right-radius:17px;
+    height: 40px;
 }
 .lupa img{
     width: 33px;
@@ -99,7 +100,6 @@ body {
 }
 main{
     display: flex;
-    margin-left: 220px;
     padding: 20px;
 }
 
@@ -211,45 +211,54 @@ main{
     border: 1px solid grey;
 }
 .Nosotros{
-    border-bottom: 1px solid grey;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top:20px;
-
-
+    padding-top:10px;
+    border-radius: 20px;
+    align-items: center;
 }
+
+
 .menudesplegable{
     gap: 70px;
 }
 .submenu {
-    position: relative;
+    display: block;
 }
+
 
 .submenu-content {
     display: none;
     position: absolute;
-    left: -160px;
+    left: 0px;
     top: 0;
     background-color: #f9f9f9;
     min-width: 160px;
     border-radius: 20px;
     box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 20%);
     flex-direction: column;
-    transform: translateX(-10px);
-    transition: opacity 1s ease, transform 1s ease;
 }
+.perfumes_menu:hover .submenu-content{
+    display: block;
+}
+.perfumes_menu{
+    cursor: pointer;
+}
+
 
 .submenu-content p{
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
+    cursor: pointer;
 }
 .submenu-content p:hover{
     background-color: #d3d3d3;
     border-radius: 10px;
 }
+
 
 
 .dropdown {
@@ -274,11 +283,12 @@ main{
     display: none;
     position: fixed;
     right: 2vw;
+    top: 80px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    height: 90vh;
+    height: 70vh;
     width: 20vw;
     border-radius: 20px;
 }
@@ -296,4 +306,15 @@ main{
 
 .show {
     display: block;
+}
+
+.rango{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid grey;
+    padding-top: 15px;
+    border-bottom: 1px solid grey;
+    padding-bottom:15px ;
 }
