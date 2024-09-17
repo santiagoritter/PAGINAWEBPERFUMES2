@@ -10,7 +10,8 @@ body {
 
 #encabezado{
     display: flex;
-    background-color: rgb(211, 211, 211);
+    background-color: rgba(129, 129, 129, 0.493);
+    backdrop-filter: blur(5px);
     align-items: center;
     justify-content: space-around;
     height: 70px;
@@ -18,8 +19,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    border-bottom: 2px solid #9c9c9c;
+    width: 96vw;
+    border-bottom: 2px solid #333;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    z-index: 1000;
 }
 
 .logo img{
@@ -31,28 +35,31 @@ body {
     width: 500px;
     height: 40px;
     display: flex;
-    border-radius: 10px;
     padding: 0 10px;
-    box-shadow: #333;
+    flex-direction: row-reverse;
     }
 
 .buscar{
     width: 100%;
     height: 100%;
-    border: none;
-    border-top-left-radius: 17px;
-    border-bottom-left-radius: 17px;
+    border-left:none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     padding-left: 10px;
 }
 .lupa{
     background-color:white;
-    border-bottom-right-radius: 17px;
-    border-top-right-radius:17px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius:20px;
     height: 40px;
+    border: 2px solid #333;
+    border-right: none;
 }
 .lupa img{
-    width: 33px;
-    height: 33px;
+    width: 29px;
+    height: 29px;
     padding: 4px;
 
 }
@@ -198,6 +205,7 @@ main{
     gap: 10px;
     border-bottom: 1px solid grey;
     padding-bottom: 40px;
+    z-index: 500;
 }
 input{
     display: flex;
@@ -218,7 +226,43 @@ input{
 .Nosotros{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center;*{
+    margin: 0;
+    padding: 0;}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    padding-top: 70px;
+}
+
+#encabezado{
+    display: flex;
+    background-color: rgb(211, 211, 211);
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #9c9c9c;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+
+.barra_de_busqueda{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-shadow: #333;
+
     padding-top:10px;
     border-radius: 20px;
     align-items: center;
@@ -276,10 +320,9 @@ input{
 .dropbtn {
     position: fixed;
     top: 0px;
-    right: 0;
+    right: 7vw;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 15px;
     border: none;
     cursor: pointer;
     height: 40px;
