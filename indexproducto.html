@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesproductos.css">
+    <title>producto</title>
+</head>
+<header id="encabezado">
+    <div class="logo">
+        <a href="http://127.0.0.1:5500/inicio.html">
+        <img src="logo.png" alt="">
+    </a>
+    </div>
+    <div class="barra_de_busqueda">
+        <input type="text" placeholder="Buscar" class="buscar">
+        <div class="lupa">
+            <img src="lupa.png" alt="" >    
+        </div>
+    </div>
+    <div class="chango">
+        <img src="carrito-de-compras.png" alt="">
+    </div>
+    <section class="menudesplegable">
+        <div class="dropdown">
+            <img src="menu.png" alt="" onclick="toggleMenu()" class="dropbtn">
+            <div id="myDropdown" class="dropdown-content">
+                <div>
+                    <a href=""><p  class="Nosotros">Nosotros</p></a>
+                </div>
+                <div class="rango">
+                    <div class="precio">
+                        <p>Precio</p>
+                    </div>
+                    <div class="input">
+                        <div class="max"> <p>max </p> <input type="number"></div>
+                        <div class="min"> <p>min </p> <input type="number"></div>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <p class="perfumes_menu">Perfumes</p>
+                    <div class="submenu-content">
+                        <p>Florales</p>
+                        <p>Amaderados</p>
+                        <p>Dulces</p>
+                        <p>Amargos</p>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+    </section>
+</header>
+<body>
+    <section class="producto">
+        <section class="fotossecundarias">
+            <div class="foto" onclick="changeMainImage(this)">
+                <img src="dior.png" alt="">
+            </div>
+            <div class="foto" onclick="changeMainImage(this)">
+                <img src="" alt="">
+            </div>
+            <div class="foto" onclick="changeMainImage(this)">
+                <img src="" alt="">
+            </div>
+            <div class="foto" onclick="changeMainImage(this)">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="foto_prinsipal">
+            <img src="scandal.png" alt="">
+        </section>
+        <!-- <section class="info">
+            <p>
+
+            </p>
+        </section> -->
+    </section>
+    <script>
+        function toggleMenu() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        function changeMainImage(clickedImage) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = clickedImage.querySelector('dior.png').src;
+            mainImage.alt = clickedImage.querySelector('img').alt;
+        }
+
+
+    </script>
+</body>
+</html>
+
