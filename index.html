@@ -52,6 +52,10 @@
         </div>
         </section>
     </header>
+    <div id="splash-screen">
+        <img src="logo.png" alt="Logo" id="splash-logo">
+        <p>Ritta et Compagnie</p>
+    </div>
 
     <main>
         <div class="caja_para_categorias">
@@ -143,8 +147,24 @@
         function toggleMenu() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var splashScreen = document.getElementById('splash-screen');
+                var mainContent = document.getElementById('main-content');
+                
+                // Iniciamos el desvanecimiento
+                splashScreen.classList.add('fade-out');
+                
+                // Esperamos a que termine la transición antes de ocultar completamente
+                splashScreen.addEventListener('transitionend', function() {
+                    splashScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
+                });
+            }, 2000);
+        });
     </script>
 
 
 </body>
 </html>
+
