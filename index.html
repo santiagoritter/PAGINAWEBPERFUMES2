@@ -22,6 +22,7 @@
         <div class="chango">
             <img src="carrito-de-compras.png" alt="">
         </div>
+       
         <section class="menudesplegable">
             <div class="dropdown">
                 <img src="menu.png" alt="" onclick="toggleMenu()" class="dropbtn">
@@ -48,10 +49,41 @@
                         </div>
                         
                     </div>
+                    <div class="iniciar_sesion">
+                        <p>iniciar sesion</p>
+                        <p>crear una cuenta</p>
+                    </div>
             </div>
         </div>
         </section>
     </header>
+    <section class="proociones">
+        <p>Hombres</p>
+        <p>Mujeres</p>
+        <p>Ofertas</p>
+        <p>Tussi</p>
+    </section>
+    <section class="publi">
+        <div class="carousel">
+            <div class="carousel-images">
+              <img src="jpgf1.png" alt="Paisaje Natural">
+              <img src="fotocarru2.png" alt="Comida Deliciosa">
+              <img src="jpgf3.png" alt="Amigos">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+        <div class="carousel2">
+            <div class="carousel-images2">
+              <img src="s1.jpeg" alt=" ">
+              <img src="s2.jpeg" alt=" ">
+              <img src="s3.png" alt="">
+            </div>
+            <button class="prev" onclick="moveSlide2(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide2(1)">&#10095;</button>
+          </div>
+          
+    </section>
     <div id="splash-screen">
         <img src="logo.png" alt="Logo" id="splash-logo">
         <p>Ritta et Compagnie</p>
@@ -65,6 +97,7 @@
         <section id="perfumes">
                 <div class="boton">
                     <a href="" class="link">
+                    <div class="star"><img src="star.png" alt=""></div>
                     <img src="lemaleelc2.png" alt="" class="perfume">
                     <p class="nombre">JEAN PAUL GAULTIER - LE MALE ELIXIR</p>
                     </a>
@@ -85,7 +118,9 @@
                 <div class="boton">
                     <a href="" class="link">
                     <img src="strongerwithyou.png" alt="" class="perfume">
-                    <p class="nombre">ARMANI - STRONGER WITH YOU INTENSELY</p>
+                    <p cMujeres
+
+                    lass="nombre">ARMANI - STRONGER WITH YOU INTENSELY</p>
                     </a>
                 </div>
                 <div class="boton">
@@ -162,9 +197,41 @@
                 });
             }, 2000);
         });
+        let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelectorAll('.carousel-images img');
+  currentSlide += direction;
+
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  } else if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+
+  const offset = -currentSlide * 100; // Desplazamiento en %
+  document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide2(direction) {
+  const slides = document.querySelectorAll('.carousel-images2 img');
+  currentSlide += direction;
+
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  } else if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+
+  const offset = -currentSlide * 100; // Desplazamiento en %
+  document.querySelector('.carousel-images2').style.transform = `translateX(${offset}%)`;
+}
+
+
     </script>
 
 
 </body>
+<footer></footer>
 </html>
 
