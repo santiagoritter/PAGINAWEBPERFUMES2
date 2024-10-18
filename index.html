@@ -28,7 +28,7 @@
                 <img src="menu.png" alt="" onclick="toggleMenu()" class="dropbtn">
                 <div id="myDropdown" class="dropdown-content">
                     <div>
-                        <a href=""><p  class="Nosotros">Nosotros</p></a>
+                        <a href="#fin"><p  class="Nosotros">Nosotros</p></a>
                     </div>
                     <div class="rango">
                         <div class="precio">
@@ -60,9 +60,14 @@
     <section class="proociones">
         <p>Hombres</p>
         <p>Mujeres</p>
-        <p>Ofertas</p>
+        <a href="#inicio"><p>Ofertas</p></a>
         <p>Tussi</p>
     </section>
+    <div class="aaa" id="inicio">
+        <p>Entre os mas destacados!!</p>
+
+   
+    </div>
     <section class="publi">
         <div class="carousel">
             <div class="carousel-images">
@@ -77,10 +82,19 @@
             <div class="carousel-images2">
               <img src="s1.jpeg" alt=" ">
               <img src="s2.jpeg" alt=" ">
-              <img src="s3.png" alt="">
+               <img src="s3.png" alt="">
             </div>
             <button class="prev" onclick="moveSlide2(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide2(1)">&#10095;</button>
+          </div>
+          <div class="carousel3">
+            <div class="carousel-images3">
+              <img src="i1.png" alt=" ">
+              <img src="i2.png" alt=" ">
+               <img src="i3.png" alt="">
+            </div>
+            <button class="prev" onclick="moveSlide3(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide3(1)">&#10095;</button>
           </div>
           
     </section>
@@ -226,12 +240,43 @@ function moveSlide2(direction) {
   const offset = -currentSlide * 100; // Desplazamiento en %
   document.querySelector('.carousel-images2').style.transform = `translateX(${offset}%)`;
 }
+function moveSlide3(direction) {
+  const slides = document.querySelectorAll('.carousel-images3 img');
+  currentSlide += direction;
+
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  } else if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+
+  const offset = -currentSlide * 100; // Desplazamiento en %
+  document.querySelector('.carousel-images3').style.transform = `translateX(${offset}%)`;
+}
 
 
     </script>
 
 
 </body>
-<footer></footer>
+<footer id="fin">
+    <div class="text">
+        <p>
+            cnsjeifnbWIUJEBFJEF
+            WEFWNEFJBSEIJFBNSOfoefweñfms
+            jerfaWJIEFI WHEfiurh vwiuefhaiwb
+        </p>
+    </div>
+    <div class="text">
+        <p>dnWNEDIOJHWoidauwhdi
+            uqbWDIUJBQWJDNQW
+            IAODNJAWNDAWD</p>
+    </div>
+    <div class="text">
+        <P>SHuisbUIQWBVDSI
+            UQWBDHHBAHGEFDNJHQWB</P>
+    </div>
+
+</footer>
 </html>
 
