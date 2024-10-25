@@ -6,12 +6,16 @@
 a{
     text-decoration: none;
 }
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .proociones{
     width: 100vw;
     height: 5vh;
-    background-color: rgb(36, 35, 35);
+    backdrop-filter: blur(20px);
+    background-color: transparent;
     position: fixed;
-    top: 78px;
+    top: 75px;
     left: 0;
     display: flex;
     flex-direction: row;
@@ -19,23 +23,29 @@ a{
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    box-shadow: 7px 3px 18px 0 grey;
+}
+
+.proociones p:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .aaa{
     width: 100vw;
     height: 5vh;
-    background-color: rgb(112, 112, 112);
+    background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 100px;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 70px;
 }
 .aaa p{
     color: rgb(223, 219, 219);
 }
 .proociones p{
-    color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
 }
 body {
     font-family: Arial, sans-serif;
@@ -47,7 +57,7 @@ body {
 
 #encabezado{
     display: flex;
-    background-color: rgb(207, 206, 206);
+    background-color: rgb(255, 255, 255);
     backdrop-filter: blur(5px);
     align-items: center;
     justify-content: space-around;
@@ -56,14 +66,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 96vw;
-    border-bottom: 3px solid rgba(51, 51, 51, 0.356);
+    width: 100vw;
+    box-shadow: 7px 3px 18px 0 grey;
     z-index: 1000;
 }
 
 .logo img{
-    height: 11vh;
-    width: 10vh;
+    height: 7vh;
+    width: auto;
 }
 
 .barra_de_busqueda{
@@ -149,7 +159,7 @@ main{
 
 #perfumes{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     box-shadow: 20px;
@@ -157,11 +167,71 @@ main{
     justify-items: center;
     gap: 15vw;
     padding-top: 10vh;
+    justify-content: center;
 
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.botoncomprar{
+    background-color: black;
+    border: 2px solid black;
+    width: 6vw;
+    height: 4vh;
+    border-radius: 8px;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botoncomprar p{
+    color: white;
+    font-size: 14px;
+}
+.botoncomprar:hover{
+    animation:animacionboton 1s ease forwards;
+}
+@keyframes animacionboton{
+    100% {
+        width: 10vw;
+    }
+    1% {
+        width: 6vw;
+    }
+
+}
+.agrgaralcarrito{
+    display: block;
+    width: 4vw;
+    height: auto;
+    background-color: gray;
+    width: 6vw;
+    height: 4vh;
+    border-radius: 8px;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.agrgaralcarrito img{
+    width: 25px;
+    height: 25px;
+}
+.botoncomprar:hover .agrgaralcarrito{
+    display: block;
+}
+.agrgaralcarrito:hover{
+    animation:animacionboton 1s ease forwards;
 }
 
 
- .boton:hover {
+.boton:hover {
     border: 2px solid rgb(196, 196, 196);
     border-radius: 7px;
     animation:animacion 1s ease forwards;
@@ -169,13 +239,16 @@ main{
 .boton{
     box-shadow: #333;
     border: 2px solid white;
-    box-shadow:    2px 2px 2px 2px rgb(187, 187, 187);
+    box-shadow:2px 2px 2px 2px rgb(187, 187, 187);
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .fila{
     display: flex;
-    gap: 250px;
+    
     margin: 8%;
 }
 
@@ -187,7 +260,7 @@ main{
     gap: 2px;
     border-radius: 10px;
     box-shadow: 6px 6px 2px 2px gray;
-    width: 18vw;
+    width: 22vw;
 }
 
 .comprar{
@@ -240,13 +313,18 @@ main{
 .link{
     text-decoration: none;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
+
 .link:hover{
-    animation: animacion 1s ease forwards;
+   opacity: 90%;
 }
 .perfume{
-    width: 160px;
+    width: auto;
     height: 17vw;
     display: flex;
     flex-direction: column;
@@ -342,8 +420,8 @@ input{
 .dropdown-content {
     display: none;
     position: fixed;
-    right: 2vw;
-    top: 126px;
+    right: 5vw;
+    top: 15vh;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -414,6 +492,7 @@ input{
 .star{
     height: 25px;
     width: 25px;
+    margin-left: -70%;
 }
 .star img{
     height: 25px;
@@ -486,6 +565,7 @@ font-weight: 80;
 
     .nombre {
         width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
@@ -531,7 +611,7 @@ font-weight: 80;
 }
     .carousel {
     position: relative;
-    width: 200px;
+    width: 300px;
     margin: auto;
     overflow: hidden;
     height: auto;
@@ -539,7 +619,8 @@ font-weight: 80;
   }
   .carousel2 {
     position: relative;
-    width: 200px;
+    width: 300px;
+    
     margin: auto;
     overflow: hidden;
     height: auto;
@@ -547,7 +628,7 @@ font-weight: 80;
   }
   .carousel3 {
     position: relative;
-    width: 200px;
+    width: 300px;
     margin: auto;
     overflow: hidden;
     height: auto;
@@ -557,10 +638,13 @@ font-weight: 80;
   .carousel-images {
     display: flex;
     transition: transform 0.5s ease;
+    border-radius: 20px;
   }
   .carousel-images2 {
     display: flex;
     transition: transform 0.5s ease;
+    width: 300px;
+    height: 300px;
   }
   
   .carousel-images3 {
@@ -597,17 +681,24 @@ font-weight: 80;
   .prev {
     left: 10px;
     border-radius: 100%;
+    width: 2vw;
+    backdrop-filter: blur(100px);
+    height: 2vw;
   }
   
   .next {
     right: 10px;
     border-radius: 100%;
+    width: 2vw;
+    height: 2vw;
   }
 .publi{
     padding-top: 80px;
-    border-radius: 20px;
+    margin-top: 7vh;
+    padding-bottom: 7vh;
     display: flex;
     flex-direction: row;
+    box-shadow: 7px 3px 18px 0 grey;
 }
 footer{
     background-color: black;
